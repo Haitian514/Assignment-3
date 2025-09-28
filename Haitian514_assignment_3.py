@@ -66,3 +66,53 @@ else:
 print("\nUpdated Stats:")
 print(f"Study Hours: {study_hours}")
 print(f"Stress Level: {stress_level}")
+
+# Step 3: Study Strategy Decision
+
+study_options = ["Programming", "Math", "English", "History"]
+print("\nChoose a subject to focus on:", study_options)
+subject = input("Your choice: ")
+
+if subject not in study_options:
+    print("Invalid subject. No changes made.")
+else:
+    # Unique outcomes for each subject
+    if subject == "Programming":
+        if current_gpa < 3.0 or stress_level > 60:
+            current_gpa += 0.15
+            social_points -= 10
+            print("Programming boosted your GPA, but drained your social energy.")
+        else:
+            current_gpa += 0.25
+            social_points -= 5
+            print("You thrived in Programming with minimal social cost.")
+    
+    elif subject == "Math":
+        if study_hours > 30 and not stress_level > 70:
+            current_gpa += 0.2
+            social_points -= 8
+            print("Math sharpened your skills, but required intense focus.")
+        else:
+            current_gpa += 0.1
+            social_points -= 3
+            print("Math helped a bit, but you struggled to stay consistent.")
+    
+    elif subject == "English":
+        if stress_level < 50 and current_gpa >= 2.5:
+            current_gpa += 0.1
+            social_points += 5
+            print("English gave you a creative outlet and boosted your social life.")
+        else:
+            current_gpa += 0.05
+            social_points += 2
+            print("English was relaxing, but didn’t impact your GPA much.")
+    
+    elif subject == "History":
+        if study_hours > 35 or current_gpa < 2.8:
+            current_gpa += 0.12
+            social_points += 3
+            print("History helped you reflect and grow academically.")
+        else:
+            current_gpa += 0.08
+            social_points += 1
+            print("History was a steady choice with modest gains.")
