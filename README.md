@@ -9,7 +9,7 @@ This interactive Python game simulates a semester in college. Players make decis
 - **Step 4:** Identity operators and nested conditionals
 
 ## How to Run:
-Run `sean_assignment_3.py` in any Python 3 environment. Follow the prompts and make choices to shape your semester.
+Run `srtelemaque_assignment_3.py` in any Python 3 environment. Follow the prompts and make choices to shape your semester.
 
 ## Endings:
 - Burnout from social overload
