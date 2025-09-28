@@ -116,3 +116,43 @@ else:
             current_gpa += 0.08
             social_points += 1
             print("History was a steady choice with modest gains.")
+            
+# Step 4: Final Semester Assesment:
+
+print("\nFinal Semester Decision: Join a club or take extra tutoring?")
+final_choice = input("Type 'club' or 'tutoring': ")
+
+# Identity operator usage
+if type(final_choice) is not str:
+    print("Unexpected input type. Ending simulation.")
+else:
+    if final_choice == "club":
+        social_points += 10
+        stress_level += 5
+        if stress_level > 70:
+            print("You burned out from too much socializing!")
+        elif current_gpa >= 3.5:
+            print("You balanced academics and social life brilliantly!")
+        else:
+            print("You had fun but your grades slipped.")
+    
+    elif final_choice == "tutoring":
+        study_hours += 10
+        stress_level += 10
+        if current_gpa >= 3.8:
+            print("You aced the semester with top honors!")
+        elif current_gpa >= 3.0:
+            print("Solid performance with noticeable improvement.")
+        else:
+            print("You tried hard but need more support.")
+    
+    else:
+        print("Invalid final choice. Semester ends quietly.")
+
+# Final stats
+print("\nFinal Stats:")
+print(f"GPA: {current_gpa}")
+print(f"Study Hours: {study_hours}")
+print(f"Social Points: {social_points}")
+print(f"Stress Level: {stress_level}")
+# Copilot was used to debug this code, and explain and slightly modify my code to meet a missing requirement in zybooks assignment
